@@ -17,3 +17,40 @@ update employees set EmAge=40, EmpZone='North' where EmpID=02;
 
 Delete from Employees where EmpID=05;
 truncate employees;
+
+create database company_db;
+use company_db;
+create table Employee(EmpID int not null, Firstname varchar(10), Lastname varchar(10), EmpAge int);
+desc employee;
+-- Unique key constraints;
+create table emp1(empId int not null, Firstname varchar(10), lastname varchar(10));
+insert into emp1 values(1,'Ravi','Kumar');
+insert into emp1 values(1,'Ravi','Kumar');
+insert into emp1 values(1,'Ravi','Kumar');
+insert into emp1 values(1,'Ravi','Kumar');
+
+select * from emp1;
+
+-- check constraints while creating table 
+create table emp3(empid int not null, firstname varchar(10), Lastname varchar(10), empage int, check(EmpAge>20));
+insert into emp3 values(1,'Arjun','Kapoor', 22);
+insert into emp3 values(1,'Arjun','Kapoor', 24);
+insert into emp3 values(1,'Arjun','Kapoor', 23);
+select*from emp3;
+-- alter table emp3 add column salary int;
+alter table emp3 drop column salary;
+alter table emp3 add column salary int,add check(salary>=50000);
+insert into emp3 values (4,'Nupur','Shah',26,60000);
+select * from emp3;
+show create table emp3; 
+
+
+
+
+
+
+
+
+
+
+
