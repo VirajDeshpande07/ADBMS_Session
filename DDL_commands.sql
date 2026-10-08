@@ -44,6 +44,11 @@ insert into emp3 values (4,'Nupur','Shah',26,60000);
 select * from emp3;
 show create table emp3; 
 
+create table emp6 (empId int not null primary key, firstname varchar(10),lastname varchar(10), empAge int, check(empAge>20));
+insert into emp6 values(01,'ravi','kumar',22);
+insert into emp6 values(02,'ram','kumar',22);
+insert into emp6 values(03,'rahul','kumar',22);
+
 
 
 
