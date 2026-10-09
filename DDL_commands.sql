@@ -48,9 +48,22 @@ create table emp6 (empId int not null primary key, firstname varchar(10),lastnam
 insert into emp6 values(01,'ravi','kumar',22);
 insert into emp6 values(02,'ram','kumar',22);
 insert into emp6 values(03,'rahul','kumar',22);
+select * from emp6;
+Insert into Emp6(EmpID, firstname, lastname) values(5, 'A','B');
+create table emp7(empid int primary key, firstname varchar(10), lastname varchar(10), empAge int, Salary int);
+insert into emp7 values(01, 'Ram', 'Kumar', 20,50000);
+alter table emp7 add constraint chk_empAge_salary check (empAge>=20 and Salary>=50000);
+create index EmpIndex on Emp6(firstname);
+show indexes from emp6;
+create index demoindex on Employee(EmpAge);
+show indexes from Employee;
+drop index demoindex on Employee;
 
-
-
+create table person(personId int primary key auto_increment, firstname varchar(10), lastname varchar(10) not null, age int);
+insert into person values(1,'A','B',20);
+insert into person values(2,'C','D',22);
+select * from person;
+desc person;
 
 
 
