@@ -38,7 +38,7 @@ select * from customer1 order by city, price;
 
 select * from customer1 order by city desc,price asc;
 
-/*Single-row functio*/
+/*Single-row function*/
 /*case conversion function*/
 select upper(cust_name), lower(product) from customer1;
 alter table customer1 add column lastname varchar(20);
@@ -47,6 +47,7 @@ update customer1 set lastname = "bhoir" where custID = 02;
 select concat(cust_name," ",lastname) as FullName from customer1;
 select substr(cust_name,1,3) from customer1;
 
+ 
 
 
 
